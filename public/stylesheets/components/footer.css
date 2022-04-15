@@ -16,26 +16,6 @@ footer p {
     color: rgba(255, 255, 255, 0.58);
 }
 
-footer .links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-footer .links h5 a {
-    color: rgba(255, 255, 255, 0.78);
-    margin: 0 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-footer .links h5 a[data-active] {
-    color: white;
-}
-
-footer .links h5:hover a {
-    color: white;
-}
 
 .socials li {
     list-style: none;

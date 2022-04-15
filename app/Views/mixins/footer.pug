@@ -8,14 +8,6 @@ mixin footer()
         .col-md-12.text-center
           h2.footer-heading.my-3
             a.logo(href='#') Obel
-          ul.links.p-0.my-3
-            li.links
-              h5.m-0
-                each name, route in routes
-                  if route === currentRoute
-                    a(href=route data-active) #{name}
-                  else
-                    a(href=route) #{name}
           ul.socials.p-0.my-3
             li: a(href='#'): i.bi.bi-facebook
             li: a(href='#'): i.bi.bi-twitter
