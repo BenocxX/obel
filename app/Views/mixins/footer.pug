@@ -3,10 +3,10 @@ mixin footer_dependencies()
 
 mixin footer()
   footer
-    .container
+    .container.py-3
       .row.justify-content-center
         .col-md-12.text-center
-          h2.footer-heading.my-3
+          h2.footer-heading.mb-3
             a.logo(href='#') Obel
           ul.socials.p-0.my-3
             li: a(href='#'): i.bi.bi-facebook
@@ -14,5 +14,5 @@ mixin footer()
             li: a(href='#'): i.bi.bi-linkedin
       .row.mt-2
         .col-md-12.text-center
-          p.mb-3 Copyright &copy 2022 All rights reserved
+          p.m-0 Copyright &copy 2022 All rights reserved
             a.ps-1(href='http://obel.ca/home' target='_blank') Obel.ca
