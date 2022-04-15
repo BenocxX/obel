@@ -1,4 +1,5 @@
 include mixins/base
+include mixins/navbar
 
 doctype html
 html
@@ -12,6 +13,7 @@ html
     script(src="/javascripts/vendor/jquery-3.5.1.min.js")
 
   body
+    +navbar
     .container
       +flash
       block content

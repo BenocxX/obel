@@ -11,6 +11,13 @@ class AboutController extends Controller
 
     public function about(): Response
     {
-        return $this->render("about");
+        return $this->render("about", [
+            "currentRoute" => "/about",
+            "routes" => [
+                "/home" => "Home",
+                "/request" => "Request",
+                "/about" => "About"
+            ]
+        ]);
     }
 }

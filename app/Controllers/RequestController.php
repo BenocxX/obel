@@ -11,6 +11,13 @@ class RequestController extends Controller
 
     public function request(): Response
     {
-        return $this->render("request");
+        return $this->render("request", [
+            "currentRoute" => "/request",
+            "routes" => [
+                "/home" => "Home",
+                "/request" => "Request",
+                "/about" => "About"
+            ]
+        ]);
     }
 }

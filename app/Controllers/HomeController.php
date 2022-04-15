@@ -12,6 +12,13 @@ class HomeController extends Controller
 
     public function home(): Response
     {
-        return $this->render("home");
+        return $this->render("home", [
+            "currentRoute" => "/home",
+            "routes" => [
+                "/home" => "Home",
+                "/request" => "Request",
+                "/about" => "About"
+            ]
+        ]);
     }
 }
