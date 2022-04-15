@@ -2,21 +2,21 @@ mixin footer_dependencies()
   link(href="/stylesheets/components/footer.css" rel="stylesheet")
 
 mixin footer()
-  footer.footer-07
+  footer
     .container
       .row.justify-content-center
         .col-md-12.text-center
-          h2.footer-heading
+          h2.footer-heading.my-3
             a.logo(href='#') Obel
-          p.menu
+          p.menu.my-3
             a(href='#') Home
             a(href='#') Request
             a(href='#') About
-          ul.socials.p-0
+          ul.socials.p-0.my-3
             li: a(href='#'): i.bi.bi-facebook
             li: a(href='#'): i.bi.bi-twitter
             li: a(href='#'): i.bi.bi-linkedin
       .row.mt-2
         .col-md-12.text-center
-          p.copyright Copyright &copy 2022 All rights reserved
+          p.mb-3 Copyright &copy 2022 All rights reserved
             a.ps-1(href='http://obel.ca/home' target='_blank') Obel.ca
