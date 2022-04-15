@@ -1,0 +1,8 @@
+mixin buttons_dependencies()
+  link(href="/stylesheets/components/buttons.css" rel="stylesheet")
+
+mixin button_arrow(title, fg, bg)
+  button.btn-arrow(style="background-color: " + bg + ";")
+    .arrow-background(style="background-color: " + fg + ";")
+    span=title
+    i.bi.bi-arrow-right
