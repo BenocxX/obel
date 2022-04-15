@@ -1,0 +1,13 @@
+
+section.main {
+    background: url("../../assets/images/home_image.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+}
+
+section.main:nth-of-type(2n) {
+    background-color: #FE4B74;
+}
