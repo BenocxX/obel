@@ -1,15 +1,15 @@
+mixin navbar_dependencies()
+  link(href="/stylesheets/components/navbar.css" rel="stylesheet")
+
 mixin navbar()
-  nav.navbar.navbar-expand-lg.navbar-light.bg-light
-    .container-fluid
-      a.navbar-brand(href='#') Navbar
-      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
-        span.navbar-toggler-icon
-      #navbarNav.collapse.navbar-collapse
-        ul.navbar-nav
-          each name, route in routes
-            if route === currentRoute
-              li.nav-item
-                a.nav-link.active(href=route) #{name}
-            else
-              li.nav-item
-                a.nav-link(href=route) #{name}
+  nav.d-flex.align-items-center.px-5(style="background-color: #1b3375; color: white; height: 5rem;")
+    //img.me-2(src="Logo" width="35")
+    a.d-flex.flex-row.justify-content-center.align-items-center
+      i.bi.bi-image(style="font-size: 1.5rem; margin-right: 0.5rem;")
+      h2.m-0.me-3 Obel
+    ul.list-unstyled.d-flex.flex-row.m-0
+      each name, route in routes
+        if route === currentRoute
+          li(data-active): a.nav-link(href=route) #{name}
+        else
+          li: a.nav-link(href=route) #{name}

@@ -1,0 +1,35 @@
+.nav-link {
+    text-decoration: none;
+    color: #bbbbbb;
+    transition: all 0.3s ease-in-out;
+    padding: 0.2rem 0.5rem;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+li[data-active] .nav-link {
+    color: white;
+}
+
+li:hover .nav-link {
+    transform: scaleX(1);
+}
+
+li .nav-link::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+li .nav-link:hover::before {
+    transform: scaleX(0.7);
+}
