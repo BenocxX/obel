@@ -2,14 +2,18 @@ mixin navbar_dependencies()
   link(href="/stylesheets/components/navbar.css" rel="stylesheet")
 
 mixin navbar()
-  nav.d-flex.align-items-center.px-5(style="background-color: #1b3375; color: white; height: 5rem;")
+  nav.d-flex.align-items-center.px-5.position-relative(style="background-color: #1b3375; color: white; height: 5rem;")
     //img.me-2(src="Logo" width="35")
     a.d-flex.flex-row.justify-content-center.align-items-center
       i.bi.bi-image(style="font-size: 1.5rem; margin-right: 0.5rem;")
-      h2.m-0.me-3 Obel
-    ul.list-unstyled.d-flex.flex-row.m-0
+      h2.m-0.me-3(style="font-size: 32px;") Obel
+    ul.nav-list
       each name, route in routes
         if route === currentRoute
-          li(data-active): a.nav-link(href=route) #{name}
+          li.nav-list-item(data-active)
+            h5.m-0
+              a.nav-link(href=route) #{name}
         else
-          li: a.nav-link(href=route) #{name}
+          li.nav-list-item
+            h5.m-0
+              a.nav-link(href=route) #{name}
