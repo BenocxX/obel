@@ -1,3 +1,7 @@
+nav {
+    padding: 0 3rem;
+}
+
 .nav-list {
     list-style: none;
     display: flex;
@@ -49,6 +53,10 @@
 }
 
 @media all and (max-width: 750px) {
+    nav {
+        padding: 0 1rem;
+    }
+
     .nav-list {
         flex: 1;
         justify-content: end;
