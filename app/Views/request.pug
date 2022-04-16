@@ -1,3 +1,18 @@
 extends layout
 
+block style
+  link(href="/stylesheets/pages/request.css" rel="stylesheet")
+
 block content
+  section.first.p-0.text-white
+    +navbar
+    .presentation-info
+      h1 Prototyping Request
+      p(style="width: 20rem;") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, vero.
+  section.p-0
+    .container(style="height: 100%;")
+      .row(style="height: 100%;")
+        .col-lg-2.col-md-0
+        .col-lg-8.col-md-6.d-flex.flex-column.justify-content-center
+          // Form
+        .col-lg-2.col-md-0
