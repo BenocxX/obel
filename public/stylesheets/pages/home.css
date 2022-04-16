@@ -2,17 +2,13 @@ section {
     height: 100vh;
 }
 
-section.main {
+section.first {
     background: url("../../assets/images/home_image.jpeg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     position: relative;
-}
-
-section.main:nth-of-type(2n) {
-    background-color: #FE4B74;
 }
 
 .presentation-info {
