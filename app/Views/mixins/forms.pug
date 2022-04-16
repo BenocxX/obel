@@ -1,0 +1,41 @@
+mixin forms_dependencies()
+  link(href="/stylesheets/components/forms.css" rel="stylesheet")
+
+mixin input(fieldName, defaultValue)
+  if defaultValue === undefined
+      -defaultValue = ''
+    -inputValue = val(fieldName, defaultValue)
+  .input-group.custom-input-group
+    span.input-group-text
+      i(class!=attributes.icon)
+    input.form-control(name=fieldName placeholder!=attributes.placeholder type="text" value=inputValue)
+
+mixin input-password(fieldName, defaultValue)
+  if defaultValue === undefined
+      -defaultValue = ''
+  .input-group.custom-input-group
+    span.input-group-text
+      i(class!=attributes.icon)
+    input.form-control(name=fieldName placeholder!=attributes.placeholder type="password" value=defaultValue)
+
+mixin input-select(fieldName)
+  .input-group.custom-input-group
+    span.input-group-text
+      i(class!=attributes.icon)
+    select.form-select(name=fieldName)
+      block
+
+mixin input-textbox(fieldName)
+  .form-floating
+    textarea.form-control(placeholder='Request' style='height: 300px; min-height: 200px; max-height: 500px;')
+    label(for='floatingTextarea2') Explain your request
+
+mixin input-file(fieldName)
+  input.form-control(type='file')
+
+mixin form-button(text, type)
+  if text === undefined
+    -text = 'Button'
+  if type === undefined
+    -type = 'btn-primary'
+  button.btn(class=type type="submit") #{text}
