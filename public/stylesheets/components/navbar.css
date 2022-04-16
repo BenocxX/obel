@@ -1,5 +1,9 @@
+@import "../colors.css";
+
 nav {
     padding: 0 3rem;
+    background-color: var(--primary);
+    color: white;
 }
 
 .nav-list {
