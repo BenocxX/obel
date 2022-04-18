@@ -27,7 +27,7 @@ mixin input-select(fieldName)
 
 mixin input-textbox(fieldName)
   .form-floating
-    textarea.form-control(placeholder='Request' style='height: 300px; min-height: 200px; max-height: 500px;')
+    textarea.form-control(name=fieldName placeholder='Request' style='height: 300px; min-height: 200px; max-height: 500px;')
     label(for='floatingTextarea2') Explain your request
 
 mixin input-file(fieldName)
