@@ -31,7 +31,7 @@ mixin input-textbox(fieldName)
     label(for='floatingTextarea2') Explain your request
 
 mixin input-file(fieldName)
-  input.form-control(type='file')
+  input.form-control(type='file' name=fieldName)
 
 mixin form-button(text, type)
   if text === undefined
