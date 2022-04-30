@@ -57,7 +57,11 @@ class RequestController extends Controller
         $broker = new RequestBroker();
         $broker->insert($requestDescription, $clientName, $clientEmail);
         $result = $broker->getLatestId();
-        $id = $result[0]->id;
+        if (!empty($result)) {
+            $id = $result[0]->id + 1;
+        } else {
+            $id = 1;
+        }
 
         try {
             $email = new Mail();
