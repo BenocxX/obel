@@ -32,13 +32,13 @@ class RequestController extends Controller
     {
         $form = $this->buildForm();
         $form->field("name")->validate([
-            Rule::notEmpty("Please enter an name."),
+            Rule::notEmpty("Please enter a name."),
         ]);
         $form->field("email")->validate([
             Rule::notEmpty("Please enter an email."),
         ]);
         $form->field("description")->validate([
-            Rule::notEmpty("Please enter an description."),
+            Rule::notEmpty("Please enter a description."),
         ]);
 //        $form->field("file")->validate([
 //            Rule::notEmpty("Please enter an file."),
