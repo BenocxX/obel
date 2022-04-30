@@ -55,7 +55,6 @@ class RequestController extends Controller
 //        $file = $form->getValue("file");
 
         $broker = new RequestBroker();
-        $broker->insert($requestDescription, $clientName, $clientEmail);
         $result = $broker->getLatestId();
         if (!empty($result)) {
             $id = $result[0]->id + 1;
