@@ -68,15 +68,14 @@ class RequestController extends Controller
             $email->addContent(
                 "text/html", "Client's name: $clientName </br>Client's email: $clientEmail</br></br>Request description: $requestDescription"
             );
-            try {
-                $sendgrid = new SendGrid(getenv("SEND_GRID_API_KEY"));
-                $sendgrid->send($email);
-                Flash::success("Request submitted successfully!");
-            } catch (Exception $e) {
-                Flash::error("Failed to send email.");
-            }
+
+            $sendgrid = new SendGrid(getenv("SEND_GRID_API_KEY"));
+            $sendgrid->send($email);
+
+            Flash::success("Request submitted successfully!");
+            $broker->insert($requestDescription, $clientName, $clientEmail);
         } catch (Exception $e) {
-            Flash::error("Failed to prepare email.");
+            Flash::error("Failed to send email.");
         }
         return $this->redirect("/request");
     }
