@@ -1,0 +1,26 @@
+section {
+    height: 100vh;
+}
+
+section.first {
+    background: url("../../assets/images/computer_3d_modeling2.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+
+.presentation-info {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-20%, -50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.presentation-info h1 {
+    font-weight: bold;
+    font-size: xxx-large;
+}
