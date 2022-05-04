@@ -35,13 +35,18 @@ section.first {
 }
 
 .info-box {
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 15rem;
     height: 15rem;
     border: 1px solid gray;
+    /* overflow: hidden; */
+}
+
+.info-box .top {
+    position: absolute;
 }
 
 @media screen and (max-width: 850px) {
