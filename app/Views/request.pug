@@ -6,21 +6,8 @@ block style
 block content
   section.first.p-0.text-white
     +navbar
-    //.container(style="height: 100%;")
-      .row.py-5(style="height: 100%;")
-        .col-lg-2.col-md-0
-        .col-lg-8.col-md-6.d-flex.flex-column
-          h1 Submit a request
-          +form("get", "/request")
-            .d-flex
-              .pe-2.flex-grow-1: +input("name")(placeholder="Name" icon="bi-person")
-              .ps-2.flex-grow-1: +input("email")(placeholder="Email" icon="bi-envelope")
-            .py-3: +input-textbox
-            .pb-3: +input-file("file")
-            .text-end: +form-button("Submit Request", "btn-primary")
-        .col-lg-2.col-md-0
     .presentation-info
-      h1 Prototyping Request
+      h1.title Prototyping Request
       p(style="width: 20rem;") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, vero.
   section.p-0
     .container(style="height: 100%;")
