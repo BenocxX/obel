@@ -21,9 +21,9 @@ class RequestController extends Controller
         return $this->render("request", [
             "currentRoute" => "/request",
             "routes" => [
-                "/home" => "Home",
-                "/request" => "Request",
-                "/about" => "About"
+                "/home" => "home",
+                "/request" => "request",
+                "/about" => "about"
             ]
         ]);
     }

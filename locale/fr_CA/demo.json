@@ -1,5 +1,14 @@
 {
+  "navbar": {
+    "home": "Accueil",
+    "request": "Requête",
+    "about": "À propos"
+  },
   "home": {
-    "title": "Prototype 3D"
+    "presentationInfo": {
+      "title": "Prototype 3D",
+      "info": "OBEL saura vous fournir n’importe quel modèle 3D et imprimera votre projet avec une grande précision!",
+      "button": "Faire une requête"
+    }
   }
 }

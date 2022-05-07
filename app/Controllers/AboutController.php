@@ -14,9 +14,9 @@ class AboutController extends Controller
         return $this->render("about", [
             "currentRoute" => "/about",
             "routes" => [
-                "/home" => "Home",
-                "/request" => "Request",
-                "/about" => "About"
+                "/home" => "home",
+                "/request" => "request",
+                "/about" => "about"
             ]
         ]);
     }

@@ -11,11 +11,11 @@ mixin navbar()
         if route === currentRoute
           li.nav-list-item(data-active)
             h5.m-0
-              a.nav-link(href=route) #{name}
+              a.nav-link(href=route) #{localize("navbar." + name)}
         else
           li.nav-list-item
             h5.m-0
-              a.nav-link(href=route) #{name}
+              a.nav-link(href=route) #{localize("navbar." + name)}
     .lang
       +form("GET", "/home")
         input(type="hidden" value=other_lang name="lang")

@@ -7,8 +7,8 @@ block content
   section.first.p-0.text-white
     +navbar
     .presentation-info
-      h1.title=localize("home.title")
-      p(style="width: 20rem;") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, vero.
+      h1.title=localize("home.presentationInfo.title")
+      p(style="width: 20rem;")=localize("home.presentationInfo.info")
       a(href="/request")
         +button_arrow("Request", "#ffffff", "#1b3375")
   section.p-0

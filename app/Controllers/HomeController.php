@@ -15,9 +15,9 @@ class HomeController extends Controller
         return $this->render("home", [
             "currentRoute" => "/home",
             "routes" => [
-                "/home" => "Home",
-                "/request" => "Request",
-                "/about" => "About"
+                "/home" => "home",
+                "/request" => "request",
+                "/about" => "about"
             ]
         ]);
     }
