@@ -36,25 +36,6 @@ try {
 }
 // endregion
 
-// region [Localisation engine]
-// Optional if you don't want to use the /locale feature. This features enables the use of json files to properly
-// organize project messages whether you have multiple languages or not. It is thus highly recommended for a more clean
-// and maintainable codebase.
-try {
-    // The <locale> argument is optional, if none is given the configured locale in config.ini will be used.
-    $language = 'fr_CA';
-    $session = Session::getInstance();
-    if (!empty($session->read("lang"))) {
-        $language = $session->read("lang");
-    }
-    Localization::getInstance()->start($language);
-} catch (LocalizationException $e) {
-
-    // If engine cannot properly start an exception will be thrown and must be corrected to use this feature. Common
-    // errors are syntax error in json files. The exception message should be explicit enough.
-    die($e->getMessage());
-}
-// endregion
 
 // region [Custom inclusions]
 // Adds a list of required files for this project. Default should have at least one file dedicated for added custom

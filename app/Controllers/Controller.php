@@ -1,6 +1,8 @@
 <?php namespace Controllers;
 
+use Zephyrus\Application\Localization;
 use Zephyrus\Application\Session;
+use Zephyrus\Exceptions\LocalizationException;
 use Zephyrus\Network\Response;
 
 /**
@@ -60,6 +62,7 @@ abstract class Controller extends SecurityController
         $form = $this->buildForm();
         if (!empty($form->getValue('lang'))) {
             Session::getInstance()->set('lang', $form->getValue('lang'));
+            $this->localize();
         }
         return parent::before();
     }
@@ -75,5 +78,19 @@ abstract class Controller extends SecurityController
     public function after(?Response $response): ?Response
     {
         return parent::after($response);
+    }
+
+    private function localize()
+    {
+        try {
+            $language = 'fr_CA';
+            $session = Session::getInstance();
+            if (!empty($session->read("lang"))) {
+                $language = $session->read("lang");
+            }
+            Localization::getInstance()->start($language);
+        } catch (LocalizationException $e) {
+            die($e->getMessage());
+        }
     }
 }
