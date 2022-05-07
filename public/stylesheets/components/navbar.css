@@ -57,6 +57,12 @@ nav {
     transform: scaleX(0.7);
 }
 
+.change-lang {
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
 @media all and (max-width: 750px) {
     nav {
         padding: 0 1rem;

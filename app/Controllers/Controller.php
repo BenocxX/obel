@@ -1,5 +1,6 @@
 <?php namespace Controllers;
 
+use Zephyrus\Application\Session;
 use Zephyrus\Network\Response;
 
 /**
@@ -23,8 +24,23 @@ abstract class Controller extends SecurityController
      */
     public function render($page, $args = []): Response
     {
+        $otherLang = 'en_US';
+        $otherLangText = 'EN';
+        $session = Session::getInstance();
+        if (!empty($session->read('lang'))) {
+            $currentLang = $session->read('lang');
+            if ($currentLang == 'fr_CA') {
+                $otherLang = 'en_US';
+                $otherLangText = 'EN';
+            } else if ($currentLang == 'en_US') {
+                $otherLang = 'fr_CA';
+                $otherLangText = 'FR';
+            }
+        }
         return parent::render($page, array_merge($args, [
-            'system_date' => date(FORMAT_DATE_TIME)
+            'system_date' => date(FORMAT_DATE_TIME),
+            'other_lang' => $otherLang,
+            'other_lang_text' => $otherLangText
         ]));
     }
 
@@ -41,6 +57,10 @@ abstract class Controller extends SecurityController
      */
     public function before(): ?Response
     {
+        $form = $this->buildForm();
+        if (!empty($form->getValue('lang'))) {
+            Session::getInstance()->set('lang', $form->getValue('lang'));
+        }
         return parent::before();
     }
 

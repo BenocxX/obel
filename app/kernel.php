@@ -41,9 +41,13 @@ try {
 // organize project messages whether you have multiple languages or not. It is thus highly recommended for a more clean
 // and maintainable codebase.
 try {
-
     // The <locale> argument is optional, if none is given the configured locale in config.ini will be used.
-    Localization::getInstance()->start('fr_CA');
+    $language = 'fr_CA';
+    $session = Session::getInstance();
+    if (!empty($session->read("lang"))) {
+        $language = $session->read("lang");
+    }
+    Localization::getInstance()->start($language);
 } catch (LocalizationException $e) {
 
     // If engine cannot properly start an exception will be thrown and must be corrected to use this feature. Common

@@ -2,7 +2,7 @@ mixin navbar_dependencies()
   link(href="/stylesheets/components/navbar.css" rel="stylesheet")
 
 mixin navbar()
-  nav.d-flex.align-items-center.position-relative.py-3
+  nav.d-flex.align-items-center.justify-content-between.position-relative.py-3
     a.d-flex.flex-row.justify-content-center.align-items-center(href="/home")
       img(src="/assets/images/logo.png" width="35")
       h2.m-0.me-3(style="font-size: 32px;") Obel
@@ -16,3 +16,7 @@ mixin navbar()
           li.nav-list-item
             h5.m-0
               a.nav-link(href=route) #{name}
+    .lang
+      +form("GET", "/home")
+        input(type="hidden" value=other_lang name="lang")
+        button.change-lang(type="submit") #{other_lang_text}
