@@ -2,7 +2,8 @@
   "navbar": {
     "home": "Accueil",
     "request": "Requête",
-    "about": "À propos"
+    "about": "À propos",
+    "lang": "EN"
   },
   "home": {
     "presentationInfo": {

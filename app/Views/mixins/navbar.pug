@@ -17,6 +17,5 @@ mixin navbar()
             h5.m-0
               a.nav-link(href=route) #{localize("navbar." + name)}
     .lang
-      +form("GET", "/home")
-        input(type="hidden" value=other_lang name="lang")
-        button.change-lang(type="submit") #{other_lang_text}
+      +form("GET", currentRoute)
+        button.change-lang(type="submit" value=other_lang name="lang") #{localize("navbar.lang")}
