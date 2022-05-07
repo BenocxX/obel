@@ -62,8 +62,8 @@ abstract class Controller extends SecurityController
         $form = $this->buildForm();
         if (!empty($form->getValue('lang'))) {
             Session::getInstance()->set('lang', $form->getValue('lang'));
-            $this->localize();
         }
+        $this->localize();
         return parent::before();
     }
 
