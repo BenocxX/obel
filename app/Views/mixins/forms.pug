@@ -8,7 +8,7 @@ mixin input(fieldName, defaultValue)
   .input-group.custom-input-group
     span.input-group-text
       i(class!=attributes.icon)
-    input.form-control(name=fieldName placeholder!=attributes.placeholder type="text" value=inputValue)
+    input.form-control(name=fieldName placeholder=attributes.placeholder type="text" value=inputValue)
 
 mixin input-password(fieldName, defaultValue)
   if defaultValue === undefined
@@ -27,8 +27,7 @@ mixin input-select(fieldName)
 
 mixin input-textbox(fieldName)
   .form-floating
-    textarea.form-control(name=fieldName placeholder='Request' style='height: 300px; min-height: 200px; max-height: 500px;')
-    label(for='floatingTextarea2') Explain your request
+    textarea.form-control(name=fieldName style='height: 300px; min-height: 200px; max-height: 500px;')
 
 mixin input-file(fieldName)
   input.form-control(type='file' name=fieldName)

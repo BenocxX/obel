@@ -15,5 +15,20 @@
       "title": "What we can offer you",
       "detail": "Being 3 young students inspired by 3D printing, we have the skills to provide you with a 3D model, an engineering drawing and/or a plastic printed part or a complete assembly for your request . At the moment we have the Prusa i3 MK3S+ and we model with Catia and Blender. Of course we provide the models in the preferred format. If you have no preference, we will share it with you in .stl format."
     }
+  },
+  "request": {
+    "presentationInfo": {
+      "title": "Submit a request",
+      "info": "Submit your project and OBEL will respond as soon as possible! Fees and waiting time will be provided once we have responded."
+    },
+    "submit": {
+      "title": "Submit a request",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "description": "Explain your request",
+        "button": "Submit"
+      }
+    }
   }
 }

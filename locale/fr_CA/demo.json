@@ -15,5 +15,20 @@
       "title": "Ce que nous pouvons vous offrir",
       "detail": "Étant 3 jeunes étudiants inspirés par l’impression 3D, nous possédons les compétences requises pour vous fournir un modèle 3D, un plan d’ingénierie ou une pièce imprimée en plastique voire un assemblage complet pour votre requête . Pour l’instant, nous possédons la Prusa i3 MK3S+ et nous modélisons avec Catia et Blender. Bien sûr, nous fournissons les modèles dans le format de votre préférence! Si vous n’avez aucune préférence, nous allons vous le partager en format .stl."
     }
+  },
+  "request": {
+    "presentationInfo": {
+      "title": "Déposer une requête",
+      "info": "Présentez-nous votre projet et OBEL vous répondra le plus rapidement possible! Les frais et le temps d’attente seront fournis une fois que nous vous aurons répondu."
+    },
+    "submit": {
+      "title": "Envoyer une requête",
+      "form": {
+        "name": "Nom",
+        "email": "Email",
+        "description": "Expliquer votre requête",
+        "button": "Envoyer"
+      }
+    }
   }
 }
