@@ -7,20 +7,26 @@ block content
   section.first.p-0.text-white
     +navbar
     .presentation-info
-      h1.title Prototyping Request
-      p(style="width: 20rem;") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, vero.
+      h1.title=localize("request.presentationInfo.title")
+      p(style="width: 20rem;")=localize("request.presentationInfo.info")
   section.p-0
     .container(style="height: 100%;")
       .row(style="height: 100%;")
         .col-lg-2.col-md-0
         .col-lg-8.col-md-6.d-flex.flex-column.justify-content-center
-          h1 Submit a request
+          h1=localize("request.submit.title")
           +flash
           +form("post", "/request/submit")
             .d-flex
-              .pe-2.flex-grow-1: +input("name")(placeholder="Name" icon="bi-person")
-              .ps-2.flex-grow-1: +input("email")(placeholder="Email" icon="bi-envelope")
-            .py-3: +input-textbox("description")
+              .pe-2.flex-grow-1
+                label.mb-1=localize("request.submit.form.name")
+                +input("name")(icon="bi-person")
+              .ps-2.flex-grow-1
+                label.mb-1=localize("request.submit.form.email")
+                +input("email")(icon="bi-envelope")
+            .py-3
+              label.mb-1=localize("request.submit.form.description")
+              +input-textbox("description")
             //.pb-3: +input-file("file")
-            .text-end: +form-button("Submit Request", "btn-primary")
+            .text-end: +form-button(localize("request.submit.form.button"), "btn-primary")
         .col-lg-2.col-md-0

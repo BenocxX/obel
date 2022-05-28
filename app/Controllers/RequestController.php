@@ -5,6 +5,7 @@ use Models\Brokers\RequestBroker;
 use SendGrid;
 use SendGrid\Mail\Mail;
 use Zephyrus\Application\Flash;
+use Zephyrus\Application\Localization;
 use Zephyrus\Application\Rule;
 use Zephyrus\Network\Response;
 
@@ -30,15 +31,16 @@ class RequestController extends Controller
 
     public function submitRequest(): Response
     {
+        $localization = Localization::getInstance();
         $form = $this->buildForm();
         $form->field("name")->validate([
-            Rule::notEmpty("Please enter a name."),
+            Rule::notEmpty($localization->localize("error.name")),
         ]);
         $form->field("email")->validate([
-            Rule::notEmpty("Please enter an email."),
+            Rule::notEmpty($localization->localize("error.email")),
         ]);
         $form->field("description")->validate([
-            Rule::notEmpty("Please enter a description."),
+            Rule::notEmpty($localization->localize("error.description")),
         ]);
 //        $form->field("file")->validate([
 //            Rule::notEmpty("Please enter an file."),
@@ -76,10 +78,10 @@ class RequestController extends Controller
             $sendgrid = new SendGrid(getenv("SEND_GRID_API_KEY"));
             $sendgrid->send($email);
 
-            Flash::success("Request submitted successfully!");
+            Flash::success($localization->localize("error.emailSuccess"));
             $broker->insert($requestDescription, $clientName, $clientEmail);
         } catch (Exception $e) {
-            Flash::error("Failed to send email.");
+            Flash::error($localization->localize("error.emailFail"));
         }
         return $this->redirect("/request");
     }
