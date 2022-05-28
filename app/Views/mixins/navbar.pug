@@ -5,7 +5,7 @@ mixin navbar()
   nav.d-flex.align-items-center.justify-content-between.position-relative.py-3
     a.d-flex.flex-row.justify-content-center.align-items-center(href="/home")
       img(src="/assets/images/logo.png" width="35")
-      h2.m-0.me-3(style="font-size: 32px;") Obel
+      h2.m-0.mx-3(style="font-size: 32px;") Obel
     ul.nav-list
       each name, route in routes
         if route === currentRoute
