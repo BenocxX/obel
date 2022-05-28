@@ -23,7 +23,7 @@ class RequestController extends Controller
             "routes" => [
                 "/home" => "home",
                 "/request" => "request",
-                "/about" => "about"
+//                "/about" => "about"
             ]
         ]);
     }
@@ -42,6 +42,7 @@ class RequestController extends Controller
         ]);
 //        $form->field("file")->validate([
 //            Rule::notEmpty("Please enter an file."),
+//            Rule::fileSize("The submitted file is too big. Max limit is 100mo", 100)
 //        ]);
 
         if (!$form->verify()) {

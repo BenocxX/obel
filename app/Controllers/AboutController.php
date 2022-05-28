@@ -16,7 +16,7 @@ class AboutController extends Controller
             "routes" => [
                 "/home" => "home",
                 "/request" => "request",
-                "/about" => "about"
+//                "/about" => "about"
             ]
         ]);
     }
